@@ -2,7 +2,7 @@
  * @Author: zhangzirui
  * @Date: 2019-07-13 17:39:25
  * @Last Modified by: zhangzirui
- * @Last Modified time: 2019-07-14 15:17:00
+ * @Last Modified time: 2019-07-18 16:35:10
  */
 
 class TreeNode {
@@ -53,5 +53,6 @@ class BinarySearchTree {
 };
 
 module.exports = {
-    BinarySearchTree
+    BinarySearchTree,
+    TreeNode
 };

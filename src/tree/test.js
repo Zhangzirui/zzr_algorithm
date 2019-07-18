@@ -11,7 +11,13 @@ const traverse = require('./traverse');
 
 const demoTree = new util.BinarySearchTree(11, [7, 15, 5, 3, 9, 8, 10, 13, 12, 14, 20, 18, 25]);
 
-console.log(demoTree);
-console.log('pre traverse: ', traverse.preOrder(demoTree));
-console.log('mid traverse: ', traverse.midOrder(demoTree));
-console.log('mid traverse: ', traverse.postOrder(demoTree));
+const preOrder = traverse.preOrder(demoTree);
+const midOrder = traverse.midOrder(demoTree);
+const postOrder = traverse.postOrder(demoTree);
+const newTree = traverse.getTree(preOrder, midOrder);
+const newTree2 = traverse.getTree2(midOrder, postOrder);
+console.log('pre traverse: ', preOrder);
+console.log('mid traverse: ', midOrder);
+console.log('post traverse: ', postOrder);
+console.log('post traverse: ', traverse.postOrder({root: newTree}));
+console.log('pre traverse: ', traverse.preOrder({root: newTree2}));
